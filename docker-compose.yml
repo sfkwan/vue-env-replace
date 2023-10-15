@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  web:
+    image: nginx:1.25.2-alpine
+    expose:
+      - 80
+    ports:
+      - "8080:80"
+    environment:
+      SERVER_NAME: "myserver.doma.in" 
+      # Dummy key, cert
+      SSL_KEY: |-
+          -----BEGIN RSA PRIVATE KEY-----
+          MIICXQIBAAKBgQD272jYrLm8Ph5QpMWFcWUO9Ua1EviykalP+tkMIg12yZ3GvezF
+          y8aayxdztB5vu68jqMeg6mOJlscWqFUhmAxj4mDknYenVzVX2CKzCgHlGninTKxY
+          61rXDaDZVpSZ+XIESJkaB0z9HHYtrSLr0coKmq4cT5TRptOnkpDlJxIRaQIDAQAB
+          AoGATcTYoGTFmiN2KK+8BWrRCQT2X9C5woNdb3LxKIEQ/HhC2HS4PRMQWW/c0vPH
+          IilZ30EoneUztAFochpRtWLNg4lJoLy04X/eNjEiC/imp0KSwWXmnuLhDcWcb0+M
+          slddvzHAAfK1jzIk8zEvcFnhuRoR/L3yWLQp3dIkG07h5IECQQD7xdyhfYMKiYZ7
+          HIq9mU0oNaC7UvxHTw3HB4rT3yvqVZXW15JvR64qCe+sOn9xJEesGDkUUxghV+dd
+          0GFOODPb2trQ1NGyKzus72JvO61pVpIhT6kVQo3xC543/+1FvU+albjtmqKe1MjZ
+          32B6VtNdlgA4VzMC7qrZXwU+oD83WbG6s1GKQa/rXB8wo9moOGcNPP7PmXovDr6F
+          zIVbekIj0YuTQdo31aKPNmrTVqd+iOk0LGaUC5zMi0OgDaKKDuP1Ou6ANVTcBXcF
+          BnJRQ7XYtjs0oSmvA7bgbTfN4IMJxJ4hYybF1pURh/o4QW4FUytLaF8zghuTc0aP
+          yKIsFLzi5ZT34KLVNGAEA44FsG71hOajFkA4c2I/SwU+
+          -----END RSA PRIVATE KEY-----
+
+    
